@@ -28,6 +28,10 @@ form{
     margin: 20px 0;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
 .toast-msg{
     position: absolute;
     top: 85%;
