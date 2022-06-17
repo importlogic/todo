@@ -37,3 +37,9 @@ app.post('/', (req, res) => {
     }
     res.redirect('/');
 })
+
+app.post('/clear', (req, res) => {
+    toDoList.length = 0;
+    newItem = -2;
+    res.redirect('/');
+})

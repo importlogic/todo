@@ -28,6 +28,11 @@ form{
     margin: 20px 0;
 }
 
+.ri-delete-bin-line{
+    position: relative;
+    top: 1.5px;
+}
+
 .hidden{
     visibility: hidden;
 }

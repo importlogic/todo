@@ -11,6 +11,9 @@
     <!-- CSS  -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- RemixIcons  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
     <title>ToDo List</title>
 </head>
 <body>
@@ -36,6 +39,10 @@
         </form>
     </div>
 
+    <form action="/clear" method="POST" onSubmit="return confirm('Do you want clear the list?')">
+        <button type="submit" class="btn btn-outline-danger"><i class="ri-delete-bin-line"></i> Clear List</button>
+    </form>
+
     <div class="show-alert">
         <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
@@ -48,11 +55,16 @@
             <strong>Successful!</strong> New task added
     </div>
 
+    <div class="alert alert-dismissible alert-success toast-msg hidden clear">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Successful!</strong> List Cleared
+    </div>
+
     <div class="alert alert-dismissible alert-primary toast-msg hidden error">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         <strong>Oh snap!</strong> Cannot add an empty task
     </div>
-    
+
 </body>
 </html>
 

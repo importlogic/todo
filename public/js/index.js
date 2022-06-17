@@ -2,6 +2,7 @@ var list = $(".list-items")[0];
 var inputField = $(".form-control")[0];
 var successToast = $(".success")[0];
 var errorToast = $(".error")[0];
+var clearToast = $(".clear")[0];
 var showAlertsCheck = $("#flexSwitchCheckChecked")[0];
 
 
@@ -24,6 +25,10 @@ if(newItem == 1 && showAlertsCheck.checked){
 
 if(newItem == -1 && showAlertsCheck.checked){
     errorToast.classList.remove("hidden");
+}
+
+if(newItem == -2 && showAlertsCheck.checked){
+    clearToast.classList.remove("hidden");
 }
 
 showAlertsCheck.addEventListener("click", () => {
