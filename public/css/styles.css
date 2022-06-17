@@ -37,6 +37,10 @@ form{
     visibility: hidden;
 }
 
+.modal-footer{
+    padding: 15px;
+}
+
 .show-alert{
     display: flex;
     justify-content: center;
