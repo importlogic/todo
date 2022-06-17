@@ -32,6 +32,11 @@ form{
     visibility: hidden;
 }
 
+.show-alert{
+    display: flex;
+    justify-content: center;
+}
+
 .toast-msg{
     position: absolute;
     top: 85%;
