@@ -6,7 +6,8 @@ var showAlertsCheck = $("#flexSwitchCheckChecked")[0];
 
 
 var showAlerts = JSON.parse(localStorage.getItem('showAlerts'));
-showAlertsCheck.checked = showAlerts;
+if(showAlerts == null) showAlertsCheck.checked = true;
+else showAlertsCheck.checked = showAlerts;
 
 if(isEmpty) {
     list.classList.remove("add-height");
@@ -17,11 +18,11 @@ else {
     inputField.setAttribute("placeHolder", "New Task")
 }
 
-if(newItem == 1 && showAlerts){
+if(newItem == 1 && showAlertsCheck.checked){
     successToast.classList.remove("hidden");
 }
 
-if(newItem == -1 && showAlerts){
+if(newItem == -1 && showAlertsCheck.checked){
     errorToast.classList.remove("hidden");
 }
 
