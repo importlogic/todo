@@ -1,0 +1,47 @@
+body{
+    padding: 50px;
+    text-align: center;
+
+}
+
+.container-fluid{
+    padding: 0 400px;
+}
+
+.list-items{
+    padding: 40px 400px;
+    height: 200px;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.add-height{
+    height: 400px;
+}
+
+.list-items::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+form{
+    margin: 20px 0;
+}
+
+.toast-msg{
+    position: absolute;
+    top: 85%;
+    left: -400px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 0s;
+    animation: slide 0.5s forwards;
+    animation-delay: 0s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 20px; }
+}
