@@ -17,12 +17,6 @@ const listItemsSchema = ({
 
 const item = mongoose.model("item", listItemsSchema);
 
-var newItem = new item({
-    name: "test item"
-})
-
-// newItem.save();
-
 var newItem = 0;
 
 app.listen(PORT, () => {
@@ -41,23 +35,22 @@ app.get('/', (req, res) => {
                 isEmpty
                 
             });
+            newItem = 0;
         }
     })
-    newItem = 0;
 })
 
 app.post('/', (req, res) => {
-    newItem = true;
     var entry = req.body.newTask;
     if(entry == ""){
         newItem = -1;
     }
     else{
         newItem = 1;
-        var newItem = new item({
+        var newEntry = new item({
             name: entry
         })
-        newItem.save(); 
+        newEntry.save(); 
     }
     res.redirect('/');
 })
