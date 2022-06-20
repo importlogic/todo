@@ -1,12 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/toDoList');
+const mongoPassword = process.env.MONGO_PASSWORD;
+mongoose.connect(`mongodb+srv://admin_importlogic:${mongoPassword}@main.uywzg.mongodb.net/toDoListDB`, {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({ extended: false }))
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+
 
 const listItemsSchema = ({
     name: String
