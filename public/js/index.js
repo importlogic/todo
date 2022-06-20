@@ -21,14 +21,23 @@ else {
 
 if(newItem == 1 && showAlertsCheck.checked){
     successToast.classList.remove("hidden");
+    setTimeout(() => {
+        successToast.classList.add("hidden");
+    }, 10000);
 }
 
 if(newItem == -1 && showAlertsCheck.checked){
     errorToast.classList.remove("hidden");
+    setTimeout(() => {
+        errorToast.classList.add("hidden");
+    }, 10000);
 }
 
 if(newItem == -2 && showAlertsCheck.checked){
     clearToast.classList.remove("hidden");
+    setTimeout(() => {
+        clearToast.classList.add("hidden");
+    }, 10000);
 }
 
 showAlertsCheck.addEventListener("click", () => {

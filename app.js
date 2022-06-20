@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const mongoPassword = process.env.MONGO_PASSWORD;
-mongoose.connect(`mongodb+srv://admin_importlogic:${mongoPassword}@main.uywzg.mongodb.net/toDoListDB`, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({ extended: false }))
 app.set("view engine", "ejs");
 app.use(express.static("public"));
