@@ -20,11 +20,11 @@
     <h1>ToDo List</h1>
     <div class="container-fluid list-items">
         <ul class="list-group">
-            <% for(var i = 0; i < toDoList.length; i++){ %>
+            <% toDoList.forEach((item) => { %>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                <%= toDoList[i] %>
+                    <%= item.name %>
                 </li>
-            <% } %>
+            <% }) %>
         </ul>
     </div>
 
